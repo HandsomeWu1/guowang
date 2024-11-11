@@ -16,6 +16,8 @@ import Slot from './views/Slot.vue';
 import Bubble from './views/Bubble.vue';
 import Earth from './views/Earth.vue';
 import Patch from './views/Patch.vue';
+import Cluster from './components/admin/cluster/cluster.vue';
+import Grafana from './components/admin/grafana/grafana.vue';
 
 Vue.use(Router);
 const router = new Router({
@@ -43,9 +45,19 @@ const router = new Router({
                     },
                 },
                 {
-                    path: '/index',
+                    path: '/cluster',
                     name: '集群信息',
-                    component: Index,
+                    component: Cluster,
+                    showMenu: true,
+                    meta: {
+                        icon: 'el-icon-s-grid',
+                        keepAlive: false,
+                    },
+                },
+                {
+                    path: '/grafana',
+                    name: '算力可视化',
+                    component: Grafana,
                     showMenu: true,
                     meta: {
                         icon: 'el-icon-s-grid',

@@ -1,0 +1,43 @@
+/**
+*@author: wanggang
+*@date: 2020-05-09 13:30:31
+*@description: 全局table样式
+*/
+// background-color: #dcdfe6;
+// 设置table边框颜色
+
+.el-table--border::after,
+.el-table--group::after,
+.el-table::before {
+    background-color: #dcdfe6;
+}
+
+.el-table--border,
+.el-table--group {
+    border-color: #dcdfe6;
+}
+
+.el-table td,
+.el-table th.is-leaf {
+    border-bottom: 1px solid  #dcdfe6;
+}
+
+.el-table--border th,
+.el-table--border th.gutter:last-of-type {
+    border-bottom: 1px solid  #dcdfe6;
+}
+
+.el-table--border td,
+.el-table--border th {
+    border-right: 1px solid  #dcdfe6;
+}
+
+.el-table__body tr:hover > td {
+    color: rgb(51, 187, 255);
+    background-color: #dcdfe6 !important;
+}
+
+.el-table__body tr.current-row > td {
+    color: rgb(51, 187, 255);
+    background-color: #dcdfe6 !important;
+}

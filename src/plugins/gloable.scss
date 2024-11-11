@@ -1,0 +1,56 @@
+/**
+*@author: wanggang
+*@date: 2020-04-26 14:16:57
+*@description: 配置分辨率适配和全局公共样式
+*/
+// 定义基础屏幕分辨率变量
+$vw_base: 1920;
+$vh_base: 1080;
+
+// 计算视口宽度,vw()中的参数，直接传像素值
+@function vw($px) {
+    @return ($px / $vw_base) * 100vw;
+}
+
+// 计算视口高度, vh()中的参数，直接传像素值
+@function vh($px) {
+    @return ($px / $vh_base) * 100vh;
+}
+
+// 项目主题色调
+$theme-yellow-color: rgba(255, 203, 35, 1);
+$theme-blue-color: rgba(48, 145, 239, 1);
+// $theme-blue-color: rgba(74, 140, 255, 1);
+// 白色0.5透明度
+$theme-white-05-color: rgba(255, 255, 255, 0.5);
+// 白色0.1透明度
+$theme-white-01-color: rgba(255, 255, 255, 0.1);
+// 白色0.2透明度
+$theme-white-02-color: rgba(255, 255, 255, 0.2);
+// 白色0.3透明度
+$theme-white-03-color: rgba(255, 255, 255, 0.3);
+// 白色1.0透明度
+$theme-white-1-color:rgba(255, 255, 255, 1);
+$light-color: rgba(255, 255, 255, 0.1); // 全局通用浅色背景颜色
+$yellow: #ffb515; // 全局通用黄色色
+// 字体大小可根据需求自行补充
+// 10px 字体
+$font-size10: vw(10);
+// 12px 字体
+$font-size12: vw(12);
+// 14px 字体
+$font-size14: vw(14);
+// 16px 字体
+$font-size16: vw(16);
+// 18px 字体
+$font-size18: vw(18);
+// 20px 字体
+$font-size20: vw(20);
+// 22px 字体
+$font-size22: vw(22);
+// 24px 字体
+$font-size24: vw(24);
+// 36px 字体
+$font-size36: vw(36);
+// 40px 字体
+$font-size40: vw(40);

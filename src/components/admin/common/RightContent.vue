@@ -16,25 +16,11 @@
                 </el-tab-pane>
             </el-tabs>
         </div>
-        <!-- 将路由放在标签内时 所有选择的内容都会被缓存,影响性能 -->
-        <!-- <transition enter-active-class="animated fadeInLeft"
-                    leave-active-class="animated fadeOut"
-                    appear
-                    appear-active-class="animated fadeInLeft"
-        >
-            <router-view></router-view>
-        </transition> -->
 
-        <transition enter-active-class="animated fadeInLeft"
-                    leave-active-class="animated fadeOut"
-                    appear
-                    appear-active-class="animated fadeInLeft"
-        >
             <keep-alive v-if="this.$route.meta.keepAlive">
                 <router-view></router-view>
             </keep-alive>
             <router-view v-else></router-view>
-        </transition>
     </div>
 </template>
 

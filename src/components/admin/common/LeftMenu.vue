@@ -5,7 +5,7 @@
  -->
 <template>
     <div class="left-menu" :class="{fold: isCollapse===true}">
-        <div class="menu-content">
+        <div class="menu-content" style="position: absolute;">
             <el-menu  :default-active="$route.path" class="el-menu-vertical-demo"
                       @open="handleOpen"
                       @close="handleClose"
@@ -15,12 +15,12 @@
                       text-color="#fff"
                       active-text-color="#ffd04b"
                       ref="leftNavigation"
-                      :unique-opened="true"
+                      :unique-opened="false"
             >
-                <div class="menu-toggle" @click.prevent="control">
+                <!-- <div class="menu-toggle" @click.prevent="control">
                     <i class="el-icon-s-fold" v-show="!isCollapse" title="收起"></i>
                     <i class="el-icon-s-unfold" v-show="isCollapse" title="展开"></i>
-                </div>
+                </div> -->
                 <template v-for="(item,index)  in $router.options.routes">
                     <template v-if="item.name === menuModule">
                         <MenuNav :key="index" :menuData="item.children"></MenuNav>
@@ -67,7 +67,7 @@ export default {
         // FIXME 暂时注释
         // this.initLeftMenu();
         // 初始化展示首页
-        this.select(this.$route.path);
+        // this.select(this.$route.path);
     },
     methods: {
         // 判断要打开的父级路由
@@ -166,7 +166,7 @@ export default {
 </style>
 <style lang="scss" scoped>
 .left-menu {
-    // position: relative;
+    position: relative;
     display: table-cell;
     width: 200px;
     background: rgb(84, 92, 100);
